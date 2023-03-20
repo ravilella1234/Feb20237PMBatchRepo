@@ -1,8 +1,5 @@
 package seleniumpack;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
 public class TC_002 extends BaseTest
 {
 
@@ -14,12 +11,11 @@ public class TC_002 extends BaseTest
 		
 		navigateUrl("amazonurl");
 		
-		selectOption("searchDropdownBox","Books");
+		selectOption("amazondropbox_id","Books");
 		
-		typeText("field-keywords","Harry Potter");
+		typeText("amazonsearchtext_id","Harry Potter");
 		
-		clickElement("//*[@id=\"nav-search-submit-button\"]");
-		
+		clickElement("amazonsearchbutton_xpath");
 		
 		
 		//driver.findElement(By.id("searchDropdownBox")).sendKeys("Books");
