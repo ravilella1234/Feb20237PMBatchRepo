@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Properties;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,6 +14,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -25,6 +29,8 @@ public class BaseTest
 	public static Properties mainProp;
 	public static Properties childProp;
 	public static Properties orProp;
+	public static ExtentReports report;
+	public static ExtentTest test;
 	
 	public static void init() throws Exception
 	{
@@ -49,6 +55,11 @@ public class BaseTest
 		fis = new FileInputStream(ProjectRootPath+"\\src\\test\\resources\\or.properties");
 		orProp = new Properties();
 		orProp.load(fis);
+		
+		fis = new FileInputStream(ProjectRootPath+"\\src\\test\\resources\\log4jconfig.properties");
+		PropertyConfigurator.configure(fis);
+		
+		report = ExtentManager.getInstance();
 	}
 	
 	public static void launch(String browser)
