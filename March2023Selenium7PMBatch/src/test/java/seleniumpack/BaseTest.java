@@ -1,22 +1,28 @@
 package seleniumpack;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -180,6 +186,41 @@ public class BaseTest
 		
 		return by;
 		
+	}
+	
+	// Verifications
+	public static boolean isLinksEqual(String expectedlink) 
+	{
+		String actuallink = driver.findElement(By.linkText("Customer Service")).getText();
+		System.out.println("Actual Link : " +  actuallink);
+		if(actuallink.equals(expectedlink))
+			return true;
+		else
+			return false;
+	}
+	
+	//Reporting
+	
+	public static void reportPass(String passmsg) 
+	{
+		test.log(Status.PASS, passmsg);
+	}
+
+	public static void reportfail(String failmsg) throws Exception 
+	{
+		test.log(Status.FAIL, failmsg);
+		takesScreenshot();
+	}
+
+	public static void takesScreenshot() throws Exception
+	{
+		Date dt=new Date();
+		System.out.println(dt);
+		String dateFormat=dt.toString().replace(":", "_").replace(" ", "_")+".png";		
+		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileHandler.copy(scrFile, new File(System.getProperty("user.dir")+"//failurescreenshots//"+dateFormat));
+		
+		test.log(Status.INFO,"Screenshot --->" +test.addScreenCaptureFromPath(System.getProperty("user.dir")+"//failurescreenshots//"+dateFormat));
 	}
 
 }
