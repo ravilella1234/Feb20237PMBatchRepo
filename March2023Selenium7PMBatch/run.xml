@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RunSuite">
+  <test thread-count="5" name="RunTest">
+    <classes>
+      <class name="testng.TNG_002"/>
+      <class name="testng.TNG_001"/>
+      <class name="testng.Demo"/>
+    </classes>
+  </test> <!-- RunTest -->
+</suite> <!-- RunSuite -->

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+    <line>
+      <![CDATA[Clicked on Image Link]]>
+    </line>
+  </reporter-output>
+  <suite name="AutomationSuite" duration-ms="39718" started-at="2023-04-27T14:39:58Z" finished-at="2023-04-27T14:40:38Z">
+    <groups>
+    </groups>
+    <test name="AutomationTest" duration-ms="39718" started-at="2023-04-27T14:39:58Z" finished-at="2023-04-27T14:40:38Z">
+      <class name="testng.RadioButton1">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.RadioButton1@204f30ec]" name="beforeMethod" is-config="true" duration-ms="8321" started-at="2023-04-27T14:39:58Z" finished-at="2023-04-27T14:40:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="radioButtonTest()[pri:0, instance:testng.RadioButton1@204f30ec]" name="radioButtonTest" duration-ms="826" started-at="2023-04-27T14:40:06Z" finished-at="2023-04-27T14:40:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioButtonTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testng.RadioButton1@204f30ec]" name="afterMethod" is-config="true" duration-ms="1844" started-at="2023-04-27T14:40:07Z" finished-at="2023-04-27T14:40:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testng.RadioButton1 -->
+      <class name="testng.LinksTesting1">
+        <test-method status="PASS" signature="setup()[pri:0, instance:testng.LinksTesting1@146ba0ac]" name="setup" is-config="true" duration-ms="4061" started-at="2023-04-27T14:40:31Z" finished-at="2023-04-27T14:40:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="linktesting1()[pri:0, instance:testng.LinksTesting1@146ba0ac]" name="linktesting1" duration-ms="1429" started-at="2023-04-27T14:40:35Z" finished-at="2023-04-27T14:40:37Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Clicked on Image Link]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- linktesting1 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testng.LinksTesting1@146ba0ac]" name="tearDown" is-config="true" duration-ms="939" started-at="2023-04-27T14:40:37Z" finished-at="2023-04-27T14:40:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testng.LinksTesting1 -->
+      <class name="testng.TNG_003">
+        <test-method status="PASS" signature="startProcess()[pri:0, instance:testng.TNG_003@754ba872]" name="startProcess" is-config="true" duration-ms="6966" started-at="2023-04-27T14:40:16Z" finished-at="2023-04-27T14:40:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startProcess -->
+        <test-method status="PASS" signature="amazon()[pri:0, instance:testng.TNG_003@754ba872]" name="amazon" duration-ms="6496" started-at="2023-04-27T14:40:23Z" finished-at="2023-04-27T14:40:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- amazon -->
+        <test-method status="PASS" signature="endProcess()[pri:0, instance:testng.TNG_003@754ba872]" name="endProcess" is-config="true" duration-ms="1258" started-at="2023-04-27T14:40:30Z" finished-at="2023-04-27T14:40:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endProcess -->
+      </class> <!-- testng.TNG_003 -->
+      <class name="testng.CheckBox1">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testng.CheckBox1@e25b2fe]" name="beforeMethod" is-config="true" duration-ms="5855" started-at="2023-04-27T14:40:09Z" finished-at="2023-04-27T14:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="checkboxTest()[pri:0, instance:testng.CheckBox1@e25b2fe]" name="checkboxTest" duration-ms="680" started-at="2023-04-27T14:40:15Z" finished-at="2023-04-27T14:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testng.CheckBox1@e25b2fe]" name="afterMethod" is-config="true" duration-ms="991" started-at="2023-04-27T14:40:15Z" finished-at="2023-04-27T14:40:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testng.CheckBox1 -->
+    </test> <!-- AutomationTest -->
+  </suite> <!-- AutomationSuite -->
+</testng-results>
