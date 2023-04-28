@@ -70,13 +70,14 @@ public class BaseTest
 	
 	public static void launch(String browser)
 	{
-		if(p.getProperty(browser).equals("chrome")) {
+		if(browser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
-		}else if(p.getProperty(browser).equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+		}else if(browser.equals("firefox")) {
+			//WebDriverManager.firefoxdriver().setup();
+			System.setProperty("webdriver.gecko.driver", "C:\\Users\\ravi\\Downloads\\geckodriver.exe");
 			driver = new FirefoxDriver();
-		}else if(p.getProperty(browser).equals("ie")) {
+		}else if(browser.equals("ie")) {
 			WebDriverManager.iedriver().setup();
 			driver = new InternetExplorerDriver();
 		}

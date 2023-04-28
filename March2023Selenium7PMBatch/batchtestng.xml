@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="AutomationSuite">
-  <test thread-count="5" name="AutomationTest">
+<suite name="AutomationSuite" parallel="tests">
+
+  
+  <test thread-count="5" name="ChromeTest">
+  <parameter name="browser" value="chrome"></parameter>
     <classes>
       <class name="testng.RadioButton1"/>
       <class name="testng.CheckBox1"/>
@@ -9,4 +12,16 @@
       <class name="testng.LinksTesting1"/>
     </classes>
   </test> <!-- AutomationTest -->
+  
+  
+ <test thread-count="5" name="FirefoxTest">
+  <parameter name="browser" value="firefox"></parameter>
+    <classes>
+      <class name="testng.RadioButton1"/>
+      <class name="testng.CheckBox1"/>
+      <class name="testng.TNG_003"/>
+      <class name="testng.LinksTesting1"/>
+    </classes>
+  </test> <!-- AutomationTest -->
+   
 </suite> <!-- AutomationSuite -->

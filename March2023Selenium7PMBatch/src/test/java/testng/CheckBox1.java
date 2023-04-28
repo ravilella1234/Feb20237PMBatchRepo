@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -16,16 +17,17 @@ import seleniumpack.BaseTest;
 
 public class CheckBox1  extends BaseTest
 {
-  
+	
 	@BeforeMethod
-	public void beforeMethod() throws Exception 
+	@Parameters("browser")
+	public void beforeMethod(String btype) throws Exception 
 	{
 		System.out.println("startProcess");
 	    init();
 		test = report.createTest("CheckBox1");
 		test.log(Status.PASS, "Initiating the Property Files...");
 				
-		launch("chromebrowser");
+		launch(btype);
 		test.log(Status.INFO, "Opened the Browser :- " + p.getProperty("chromebrowser"));
 						
 		navigateUrl("chekboxurl");

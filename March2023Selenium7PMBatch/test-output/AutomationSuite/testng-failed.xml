@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AutomationSuite]">
+  <test thread-count="5" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testng.CheckBox1">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="checkboxTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- testng.CheckBox1 -->
+      <class name="testng.RadioButton1">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="radioButtonTest"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- testng.RadioButton1 -->
+      <class name="testng.LinksTesting1">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="linktesting1"/>
+        </methods>
+      </class> <!-- testng.LinksTesting1 -->
+      <class name="testng.TNG_003">
+        <methods>
+          <include name="endProcess"/>
+          <include name="amazon"/>
+          <include name="startProcess"/>
+        </methods>
+      </class> <!-- testng.TNG_003 -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [AutomationSuite] -->

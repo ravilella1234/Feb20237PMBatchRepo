@@ -7,20 +7,23 @@ import com.aventstack.extentreports.Status;
 import seleniumpack.BaseTest;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.AfterMethod;
 
 public class TNG_003 extends BaseTest
 {
-	
+ 
+  
   @BeforeMethod
-  public void startProcess() throws Exception 
+  @Parameters("browser")
+  public void startProcess(String btype) throws Exception 
   {
 	  System.out.println("startProcess");
 	    init();
 		test = report.createTest("TNG_003");
 		test.log(Status.INFO, "Init the properties files....");
 		
-		launch("chromebrowser");
+		launch(btype);
 		test.log(Status.PASS, "Launching the browser : " + p.getProperty("chromebrowser"));
 		
 		navigateUrl("amazonurl");
