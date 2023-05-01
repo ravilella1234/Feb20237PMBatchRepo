@@ -1,57 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="2" failed="0" ignored="0" total="4" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="megasuite" duration-ms="0" started-at="2023-04-28T14:53:06Z" finished-at="2023-04-28T14:53:06Z">
+  <suite name="Default suite" duration-ms="124" started-at="2023-05-01T14:16:15Z" finished-at="2023-05-01T14:16:15Z">
     <groups>
     </groups>
-  </suite> <!-- megasuite -->
-  <suite name="SuiteA" duration-ms="6097" started-at="2023-04-28T14:53:00Z" finished-at="2023-04-28T14:53:06Z">
-    <groups>
-    </groups>
-    <test name="TestA" duration-ms="6097" started-at="2023-04-28T14:53:00Z" finished-at="2023-04-28T14:53:06Z">
-      <class name="suiteA.TestA2">
-        <test-method status="PASS" signature="testA2()[pri:0, instance:suiteA.TestA2@33e5ccce]" name="testA2" duration-ms="2014" started-at="2023-04-28T14:53:04Z" finished-at="2023-04-28T14:53:06Z">
+    <test name="Default test" duration-ms="124" started-at="2023-05-01T14:16:15Z" finished-at="2023-05-01T14:16:15Z">
+      <class name="testng.TestDependency">
+        <test-method status="PASS" signature="orange()[pri:1, instance:testng.TestDependency@5c3bd550]" name="orange" duration-ms="23" started-at="2023-05-01T14:16:15Z" finished-at="2023-05-01T14:16:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testA2 -->
-      </class> <!-- suiteA.TestA2 -->
-      <class name="suiteA.TestA3">
-        <test-method status="PASS" signature="testA3()[pri:0, instance:suiteA.TestA3@18e8568]" name="testA3" duration-ms="2007" started-at="2023-04-28T14:53:02Z" finished-at="2023-04-28T14:53:04Z">
+        </test-method> <!-- orange -->
+        <test-method status="PASS" signature="white()[pri:2, instance:testng.TestDependency@5c3bd550]" name="white" duration-ms="2" started-at="2023-05-01T14:16:15Z" depends-on-methods="testng.TestDependency.orange" finished-at="2023-05-01T14:16:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testA3 -->
-      </class> <!-- suiteA.TestA3 -->
-      <class name="suiteA.TestA1">
-        <test-method status="PASS" signature="testA1()[pri:0, instance:suiteA.TestA1@1c2c22f3]" name="testA1" duration-ms="2019" started-at="2023-04-28T14:53:00Z" finished-at="2023-04-28T14:53:02Z">
+        </test-method> <!-- white -->
+        <test-method status="SKIP" signature="blue()[pri:3, instance:testng.TestDependency@5c3bd550]" name="blue" duration-ms="7" started-at="2023-05-01T14:16:15Z" depends-on-methods="testng.TestDependency.white" finished-at="2023-05-01T14:16:15Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[test Skipped...]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: test Skipped...
+at testng.TestDependency.blue(TestDependency.java:27)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testA1 -->
-      </class> <!-- suiteA.TestA1 -->
-    </test> <!-- TestA -->
-  </suite> <!-- SuiteA -->
-  <suite name="SuiteB" duration-ms="6097" started-at="2023-04-28T14:53:00Z" finished-at="2023-04-28T14:53:06Z">
-    <groups>
-    </groups>
-    <test name="TestB" duration-ms="6097" started-at="2023-04-28T14:53:00Z" finished-at="2023-04-28T14:53:06Z">
-      <class name="suiteB.TestB1">
-        <test-method status="PASS" signature="testB1()[pri:0, instance:suiteB.TestB1@50cbc42f]" name="testB1" duration-ms="2013" started-at="2023-04-28T14:53:04Z" finished-at="2023-04-28T14:53:06Z">
+        </test-method> <!-- blue -->
+        <test-method status="SKIP" signature="green()[pri:4, instance:testng.TestDependency@5c3bd550]" name="green" duration-ms="0" started-at="2023-05-01T14:16:15Z" depends-on-methods="testng.TestDependency.blue" finished-at="2023-05-01T14:16:15Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method TestDependency.green()[pri:4, instance:testng.TestDependency@5c3bd550] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method TestDependency.green()[pri:4, instance:testng.TestDependency@5c3bd550] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testB1 -->
-      </class> <!-- suiteB.TestB1 -->
-      <class name="suiteB.TestB3">
-        <test-method status="PASS" signature="testB3()[pri:0, instance:suiteB.TestB3@1c53fd30]" name="testB3" duration-ms="2007" started-at="2023-04-28T14:53:02Z" finished-at="2023-04-28T14:53:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testB3 -->
-      </class> <!-- suiteB.TestB3 -->
-      <class name="suiteB.TestB2">
-        <test-method status="PASS" signature="testB2()[pri:0, instance:suiteB.TestB2@5f150435]" name="testB2" duration-ms="2018" started-at="2023-04-28T14:53:00Z" finished-at="2023-04-28T14:53:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testB2 -->
-      </class> <!-- suiteB.TestB2 -->
-    </test> <!-- TestB -->
-  </suite> <!-- SuiteB -->
+        </test-method> <!-- green -->
+      </class> <!-- testng.TestDependency -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

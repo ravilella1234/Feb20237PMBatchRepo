@@ -25,6 +25,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import pom.RegisterPage;
 
 public class BaseTest 
 {
@@ -37,6 +38,7 @@ public class BaseTest
 	public static Properties orProp;
 	public static ExtentReports report;
 	public static ExtentTest test;
+	public RegisterPage page;
 	
 	public static void init() throws Exception
 	{

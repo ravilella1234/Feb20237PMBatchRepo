@@ -8,21 +8,60 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">megasuite</th></tr>
-<tr><th colspan="7">SuiteA</th></tr>
-<tr><td><a href="#t0">TestA</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">6,097</td><td></td><td></td></tr>
-<tr><th colspan="7">SuiteB</th></tr>
-<tr class="stripe"><td><a href="#t1">TestB</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">6,097</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num">0</th><th class="num">12,194</th><th colspan="2"></th></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num attn">2</td><td class="num">0</td><td class="num">124</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">megasuite</th></tr></tbody><tbody><tr><th colspan="4">SuiteA</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestA &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">suiteA.TestA1</td><td><a href="#m0">testA1</a></td><td rowspan="1">1682693580557</td><td rowspan="1">2019</td></tr><tr class="passedodd"><td rowspan="1">suiteA.TestA2</td><td><a href="#m1">testA2</a></td><td rowspan="1">1682693584587</td><td rowspan="1">2014</td></tr><tr class="passedeven"><td rowspan="1">suiteA.TestA3</td><td><a href="#m2">testA3</a></td><td rowspan="1">1682693582579</td><td rowspan="1">2007</td></tr></tbody>
-<tbody><tr><th colspan="4">SuiteB</th></tr></tbody><tbody id="t1"><tr><th colspan="4">TestB &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">suiteB.TestB1</td><td><a href="#m3">testB1</a></td><td rowspan="1">1682693584588</td><td rowspan="1">2013</td></tr><tr class="passedodd"><td rowspan="1">suiteB.TestB2</td><td><a href="#m4">testB2</a></td><td rowspan="1">1682693580558</td><td rowspan="1">2018</td></tr><tr class="passedeven"><td rowspan="1">suiteB.TestB3</td><td><a href="#m5">testB3</a></td><td rowspan="1">1682693582579</td><td rowspan="1">2007</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">testng.TestDependency</td><td><a href="#m0">blue</a></td><td rowspan="1">1682950575324</td><td rowspan="1">7</td></tr><tr class="skippedeven"><td><a href="#m1">green</a></td><td rowspan="1">1682950575339</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testng.TestDependency</td><td><a href="#m2">orange</a></td><td rowspan="1">1682950575281</td><td rowspan="1">23</td></tr><tr class="passedeven"><td><a href="#m3">white</a></td><td rowspan="1">1682950575319</td><td rowspan="1">2</td></tr></tbody>
 </table>
-<h2>TestA</h2><h3 id="m0">suiteA.TestA1#testA1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">suiteA.TestA2#testA2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">suiteA.TestA3#testA3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>TestB</h2><h3 id="m3">suiteB.TestB1#testB1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">suiteB.TestB2#testB2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">suiteB.TestB3#testB3</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">testng.TestDependency#blue</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.SkipException: test Skipped...
+	at testng.TestDependency.blue(TestDependency.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testng.TestDependency#green</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Throwable: Method TestDependency.green()[pri:4, instance:testng.TestDependency@5c3bd550] depends on not successfully finished methods
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:888)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testng.TestDependency#orange</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testng.TestDependency#white</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
