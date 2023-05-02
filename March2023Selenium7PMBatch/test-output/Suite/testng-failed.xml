@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="testng.Listner"/>
+    <listener class-name="testng.RetryListener"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
-    <groups>
-      <run>
-        <include name="smoke"/>
-      </run>
-    </groups>
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testng.CheckBox1">
+      <class name="testng.TNG_003">
         <methods>
-          <include name="checkboxTest"/>
+          <include name="endProcess"/>
+          <include name="amazon"/>
+          <include name="startProcess"/>
         </methods>
-      </class> <!-- testng.CheckBox1 -->
-      <class name="testng.RadioButton1">
-        <methods>
-          <include name="radioButtonTest"/>
-        </methods>
-      </class> <!-- testng.RadioButton1 -->
+      </class> <!-- testng.TNG_003 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -9,3 +9,6 @@ Navigating to url : https://www.amazon.in
 Selecting drop option Books By using the locator : searchDropdownBox
 Enter the text Harry Potter By using locator : field-keywords
 Clicking on Search button By using locator : //*[@id="nav-search-submit-button"]
+Retrying test amazon with status FAILURE for the 1 time(s).
+Retrying test amazon with status FAILURE for the 2 time(s).
+Retrying test amazon with status FAILURE for the 3 time(s).
