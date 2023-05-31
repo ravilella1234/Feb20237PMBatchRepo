@@ -1,23 +1,26 @@
 package excelOperations;
 
 import org.testng.annotations.Test;
+
+import java.util.Hashtable;
+
 import org.testng.annotations.DataProvider;
 
-public class DataManagementwithDataprovider 
+public class DataManagementwithHashTable 
 {
 	
-  @Test(dataProvider = "getData")
-  public void f(String RunMode, String Browser, String UserName,String UserPassword) 
+  @Test(dataProvider = "dp")
+  public void f(Hashtable<String, String> str) 
   {
 	  
   }
 
   @DataProvider
-  public Object[][] getData() throws Exception 
+  public Object[][] dp() throws Exception 
   {
 	  ExcelAPI e = new ExcelAPI("C:\\Users\\ravi\\Desktop\\suitex.xlsx");
 		String sheetName = "data";
-		String testName = "TestB";
+		String testName = "TestA";
 		
 		//To find the matching Tetcase RowNumber
 		int teststartrownum = 0;
@@ -48,14 +51,20 @@ public class DataManagementwithDataprovider
 		
 		//Read the test data
 		int dataRow = 0;
-		Object[][] data = new Object[rows][cols];
+		Hashtable<String, String> table = null;
+		Object[][] data = new Object[rows][1];
 		for(int rnum=datastartrownum;rnum<datastartrownum+rows;rnum++)
 		{
+			table = new Hashtable<String, String>();
 			for(int cnum=0;cnum<cols;cnum++)
 			{
 				//System.out.println(e.getCellData(sheetName, cnum, rnum));
-				data[dataRow][cnum] = e.getCellData(sheetName, cnum, rnum);
+				//data[dataRow][cnum] = e.getCellData(sheetName, cnum, rnum);
+				String key = e.getCellData(sheetName, cnum, colstartrownum);
+				String value = e.getCellData(sheetName, cnum, rnum);
+				table.put(key, value);
 			}
+			data[dataRow][0] = table;
 			dataRow++;
 		}
 		return data;

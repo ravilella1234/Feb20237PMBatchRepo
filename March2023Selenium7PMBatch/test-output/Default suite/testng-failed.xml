@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="excelOperations.DataManagementwithDataprovider">
+      <class name="excelOperations.FaceBookFinalProgram">
         <methods>
-          <include name="f"/>
+          <include name="f" invocation-numbers="1"/>
         </methods>
-      </class> <!-- excelOperations.DataManagementwithDataprovider -->
+      </class> <!-- excelOperations.FaceBookFinalProgram -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
