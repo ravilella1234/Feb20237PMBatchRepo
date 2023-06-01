@@ -3,7 +3,6 @@ package seleniumpack;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.Date;
 import java.util.Properties;
 
@@ -25,7 +24,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pom.RegisterPage;
+import pom.CustomerLogin;
+
 
 public class BaseTest 
 {
@@ -38,8 +38,8 @@ public class BaseTest
 	public static Properties orProp;
 	public static ExtentReports report;
 	public static ExtentTest test;
-	public RegisterPage page;
 	public static String filePath;
+	public CustomerLogin login;
 	
 	static
 	{
@@ -53,7 +53,7 @@ public class BaseTest
 		fis = new FileInputStream(ProjectRootPath+"\\src\\test\\resources\\data.properties");
 		p = new Properties();
 		p.load(fis);
-		System.out.println(p.getProperty("amazonurl"));
+		//System.out.println(p.getProperty("amazonurl"));
 		
 		
 		fis = new FileInputStream(ProjectRootPath+"\\src\\test\\resources\\environment.properties");
@@ -65,7 +65,7 @@ public class BaseTest
 		fis = new FileInputStream(ProjectRootPath+"\\src\\test\\resources\\"+e+".properties");
 		childProp = new Properties();
 		childProp.load(fis);
-		System.out.println(childProp.getProperty("amazonurl"));
+		//System.out.println(childProp.getProperty("amazonurl"));
 		
 		fis = new FileInputStream(ProjectRootPath+"\\src\\test\\resources\\or.properties");
 		orProp = new Properties();

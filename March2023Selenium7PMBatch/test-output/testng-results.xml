@@ -1,70 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11905" started-at="2023-05-31T14:14:52Z" finished-at="2023-05-31T14:15:04Z">
+  <suite name="Suite" duration-ms="8209" started-at="2023-06-01T14:15:09Z" finished-at="2023-06-01T14:15:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11905" started-at="2023-05-31T14:14:52Z" finished-at="2023-05-31T14:15:04Z">
-      <class name="excelOperations.FaceBookFinalProgram">
-        <test-method status="PASS" signature="f(java.util.Hashtable)[pri:0, instance:excelOperations.FaceBookFinalProgram@204f30ec]" name="f" duration-ms="6377" started-at="2023-05-31T14:14:53Z" data-provider="getData" finished-at="2023-05-31T14:15:00Z">
+    <test name="Test" duration-ms="8209" started-at="2023-06-01T14:15:09Z" finished-at="2023-06-01T14:15:17Z">
+      <class name="pom.POM_001">
+        <test-method status="PASS" signature="beforeMethod(java.lang.String)[pri:0, instance:pom.POM_001@6500df86]" name="beforeMethod" is-config="true" duration-ms="7478" started-at="2023-06-01T14:15:09Z" finished-at="2023-06-01T14:15:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=Y, UserPassword=ravi2021, UserName=ravilella.2015@gmail.com, Browser=chrome}]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method status="SKIP" signature="f(java.util.Hashtable)[pri:0, instance:excelOperations.FaceBookFinalProgram@204f30ec]" name="f" duration-ms="4335" started-at="2023-05-31T14:15:00Z" data-provider="getData" finished-at="2023-05-31T14:15:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{ExpectedResult=LoginSuccuss, RunMode=N, UserPassword=password2, UserName=user2, Browser=firefox}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[testcase is skipped due to Runmode is No]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: testcase is skipped due to Runmode is No
-at excelOperations.FaceBookFinalProgram.f(FaceBookFinalProgram.java:26)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="f()[pri:0, instance:pom.POM_001@6500df86]" name="f" duration-ms="686" started-at="2023-06-01T14:15:16Z" finished-at="2023-06-01T14:15:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- excelOperations.FaceBookFinalProgram -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:pom.POM_001@6500df86]" name="afterMethod" is-config="true" duration-ms="0" started-at="2023-06-01T14:15:17Z" finished-at="2023-06-01T14:15:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- pom.POM_001 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

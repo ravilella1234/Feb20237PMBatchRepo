@@ -1,18 +1,17 @@
 package pom;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
 import seleniumpack.BaseTest;
 
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.AfterMethod;
-
 public class POM_001 extends BaseTest
 {
-  
+	  
   @BeforeMethod
   @Parameters("browser")
   public void beforeMethod(String btype) throws Exception 
@@ -29,10 +28,10 @@ public class POM_001 extends BaseTest
   }
   
   @Test
-  public void register() 
+  public void f() 
   {
-	  page = new RegisterPage(driver);
-	  page.customerRegistration();
+	  login = new CustomerLogin(driver);
+	  login.customerLogin();
   }
 
   @AfterMethod
